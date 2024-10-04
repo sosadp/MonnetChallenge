@@ -2,5 +2,5 @@ package com.novoid;
 
 public interface CarStrategy {
 
-    void builtCar();
+    void execute(CarFactory carFactory);
 }

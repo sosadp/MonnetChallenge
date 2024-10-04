@@ -1,20 +1,20 @@
 package com.novoid.strategy;
 
+import com.novoid.CarFactory;
 import com.novoid.CarStrategy;
+import com.novoid.CarType.Car;
 
 public class SecretAgencyStrategy implements CarStrategy {
+
+
+
     @Override
-    public void builtCar() {
+    public void execute(CarFactory carFactory) {
+        Car car = carFactory.builtCar();
+        car.start();
+        car.performFunction();
         System.out.println("Use is Secret Agent");
-        camouflage();
-        fireArmWeapons();
     }
 
-    private void camouflage(){
-        System.out.println("camouflage is active");
-    }
 
-    private void fireArmWeapons(){
-        System.out.println("Arm weapon is active");
-    }
 }

@@ -1,5 +1,9 @@
 package com.novoid;
 
+import com.novoid.CarType.ConcreteFactory.OffroadCarFactory;
+import com.novoid.CarType.ConcreteFactory.RacingCarFactory;
+import com.novoid.CarType.ConcreteFactory.SecretCarFactory;
+import com.novoid.CarType.ConcreteFactory.WorkCarFactory;
 import com.novoid.strategy.OffroadStrategy;
 import com.novoid.strategy.RacingStrategy;
 import com.novoid.strategy.SecretAgencyStrategy;
@@ -20,25 +24,29 @@ public class Main {
         switch (dayOfWeek) {
             case 1 -> {
                 System.out.println("Sunday");
+                CarFactory carFactory = new WorkCarFactory();
                 carContext.setCarStrategy(new WorkStrategy());
-                carContext.executeStrategy();
+                carContext.executeStrategy(carFactory);
             }
 
             case 2 -> {
                 System.out.println("Tuesday");
+                CarFactory carFactory = new RacingCarFactory();
                 carContext.setCarStrategy(new RacingStrategy());
-                carContext.executeStrategy();
+                carContext.executeStrategy(carFactory);
             }
 
             case 3, 4 -> {
                 System.out.println("Wednesday");
+                CarFactory carFactory = new OffroadCarFactory();
                 carContext.setCarStrategy(new OffroadStrategy());
-                carContext.executeStrategy();
+                carContext.executeStrategy(carFactory);
             }
             case 6 -> {
                 System.out.println("Wednesday");
+                CarFactory carFactory = new SecretCarFactory();
                 carContext.setCarStrategy(new SecretAgencyStrategy());
-                carContext.executeStrategy();
+                carContext.executeStrategy(carFactory);
 
             }
             default -> System.out.println("Strategy undefined");

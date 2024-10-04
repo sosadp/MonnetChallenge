@@ -1,8 +1,7 @@
 package com.novoid;
 
-public interface CarFactory {
-    void createEngine();
-    void createWheels();
-    void create();
+import com.novoid.CarType.Car;
 
+public interface CarFactory {
+    Car builtCar();
 }

@@ -8,7 +8,7 @@ public class CarContext {
         this.strategy = strategy;
     }
 
-    public void executeStrategy (){
-        this.strategy.builtCar();
+    public void executeStrategy (CarFactory carFactory){
+        this.strategy.execute(carFactory);
     }
 }

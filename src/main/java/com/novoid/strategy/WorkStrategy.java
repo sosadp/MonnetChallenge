@@ -1,12 +1,18 @@
 package com.novoid.strategy;
 
+import com.novoid.CarFactory;
 import com.novoid.CarStrategy;
-import lombok.extern.slf4j.Slf4j;
+import com.novoid.CarType.Car;
 
 
 public class WorkStrategy implements CarStrategy {
+
     @Override
-    public void builtCar() {
+    public void execute(CarFactory carFactory) {
+
+        Car car = carFactory.builtCar();
+        car.start();
+        car.performFunction();
         System.out.println("Use is work");
     }
 }

@@ -23,27 +23,27 @@ public class Main {
 
         switch (dayOfWeek) {
             case 1 -> {
-                System.out.println("Sunday");
+                System.out.println("Today is Sunday");
                 CarFactory carFactory = new WorkCarFactory();
                 carContext.setCarStrategy(new WorkStrategy());
                 carContext.executeStrategy(carFactory);
             }
 
             case 2 -> {
-                System.out.println("Tuesday");
+                System.out.println("Today is Tuesday");
                 CarFactory carFactory = new RacingCarFactory();
                 carContext.setCarStrategy(new RacingStrategy());
                 carContext.executeStrategy(carFactory);
             }
 
             case 3, 4 -> {
-                System.out.println("Wednesday");
+                System.out.println("Today is Wednesday or Thursday");
                 CarFactory carFactory = new OffroadCarFactory();
                 carContext.setCarStrategy(new OffroadStrategy());
                 carContext.executeStrategy(carFactory);
             }
             case 6 -> {
-                System.out.println("Wednesday");
+                System.out.println("Today is Friday");
                 CarFactory carFactory = new SecretCarFactory();
                 carContext.setCarStrategy(new SecretAgencyStrategy());
                 carContext.executeStrategy(carFactory);

@@ -8,7 +8,7 @@ import com.novoid.CarType.Car;
 public class WorkStrategy implements CarStrategy {
 
     @Override
-    public void execute(CarFactory carFactory) {
+    public void useCar(CarFactory carFactory) {
 
         Car car = carFactory.builtCar();
         car.start();

@@ -3,7 +3,7 @@ package com.novoid.CarType;
 public class RacingCar implements Car {
     @Override
     public void start() {
-        System.out.println("Racing");
+        System.out.println("Racing mood is active");
     }
 
     @Override

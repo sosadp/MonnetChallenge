@@ -4,7 +4,7 @@ public class WorkCar implements Car {
 
     @Override
     public void start() {
-        System.out.println("WorkCar");
+        System.out.println("WorkCar mood is active");
     }
 
     @Override

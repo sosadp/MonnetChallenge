@@ -9,6 +9,6 @@ public class CarContext {
     }
 
     public void executeStrategy (CarFactory carFactory){
-        this.strategy.execute(carFactory);
+        this.strategy.useCar(carFactory);
     }
 }

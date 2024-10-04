@@ -1,5 +1,9 @@
 package com.novoid.CarType;
 
+/**
+ * Implementacion del OffroadCar parte del patron Abstract factory
+ */
+
 public class OffroadCar implements Car {
 
     @Override

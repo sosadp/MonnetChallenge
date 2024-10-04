@@ -4,6 +4,10 @@ import com.novoid.CarFactory;
 import com.novoid.CarStrategy;
 import com.novoid.CarType.Car;
 
+/**
+ * Implementacion del OffroadStrategy parte del patron Strategy
+ */
+
 public class OffroadStrategy implements CarStrategy {
 
     @Override

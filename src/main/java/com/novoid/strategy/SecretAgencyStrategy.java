@@ -4,6 +4,9 @@ import com.novoid.CarFactory;
 import com.novoid.CarStrategy;
 import com.novoid.CarType.Car;
 
+/**
+ * Implementacion del SecretAgencyStrategy parte del patron Strategy
+ */
 public class SecretAgencyStrategy implements CarStrategy {
 
     @Override

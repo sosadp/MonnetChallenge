@@ -1,5 +1,10 @@
 package com.novoid.CarType;
 
+
+/**
+ * Implementacion del RacingCar parte del patron Abstract factory
+ */
+
 public class RacingCar implements Car {
     @Override
     public void start() {
